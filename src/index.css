@@ -3,6 +3,7 @@
 
 body {
     font-family: "Red Hat Text", sans-serif;
+    background: #fcf9f7;
 }
 
 @theme {
@@ -18,3 +19,4 @@ body {
     --color-rose-500: #87635a;
     --color-rose-900: #260f08;
 }
+

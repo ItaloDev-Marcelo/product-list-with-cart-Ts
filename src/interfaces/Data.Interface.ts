@@ -6,9 +6,18 @@ interface ImageFormate {
     desktop: string
 }
 
+
+
 export interface DataFormate {
        image: ImageFormate 
        name: string,
        category: string,
        price: number
+}
+export interface CountData {
+       image: ImageFormate 
+       name: string,
+       category: string,
+       price: number,
+       count:number
 }
