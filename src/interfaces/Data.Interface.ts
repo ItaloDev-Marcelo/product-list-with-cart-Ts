@@ -7,7 +7,7 @@ interface ImageFormate {
 }
 
 export interface CountData {
-       image: ImageFormate[] 
+       image: ImageFormate 
        name: string,
        category: string,
        price: number,
