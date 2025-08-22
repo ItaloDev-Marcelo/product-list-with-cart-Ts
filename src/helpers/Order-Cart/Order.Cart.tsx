@@ -3,7 +3,7 @@ import  CenterImage  from  '../../components/ImageCenter'
 import CardOrderItem from '../../components/Cart.OrderItem'
 import type { OrderFormate } from '../../interfaces/OrderCart'
 
-const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
+const OrderCart = ({orderData, handleRemove, openModal}:OrderFormate) => {
     const {empathyCart, carbonNeutral} = CenterImage
     const numOfCartItems = orderData.filter(item => item.isActive === true).
     map((item) => item.count)
@@ -47,7 +47,7 @@ const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
              </div>
   
              <div className='flex flex-row my-4 items-center'>
-                 <button className='w-[330px] h-[47px] mx-auto text-center bg-bt-Orange-0 text-white font-semibold rounded-[25px]'>Corfirm Order</button>
+                 <button onClick={openModal} className='w-[330px] h-[47px] mx-auto text-center bg-bt-Orange-0 text-white font-semibold rounded-[25px]'>Corfirm Order</button>
              </div>
 
              </div>
