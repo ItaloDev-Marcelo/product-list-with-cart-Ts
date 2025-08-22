@@ -2,7 +2,7 @@ import MenuCard from '../components/Menu.Card'
 import Data from '../Data/Data'
 import {useState} from 'react'
 import type { CountData } from '../interfaces/Data.Interface'
-import OrderCart from '../helpers/Order-Cart/Order-Cart'
+import OrderCart from '../helpers/Order-Cart/Order.Cart'
 
 
 const CartProductsLayout = () => {
@@ -48,10 +48,10 @@ const CartProductsLayout = () => {
     //  }
 
   return (
-         <div className='p-1 mx-2 flex flex-col xl:flex-row xl:justify-between lg:p-7'>
+         <div className='p-1 mx-2 flex flex-col items-center xl:flex-row xl:justify-between xl:items-start lg:p-7 xg:px-15 xg:py-9'>
           <main>
-          <h1 className="text-rose-900 font-semibold text-[1.5em] lg:text-[2.2em] my-10">Dessets</h1>
-          <section className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-7'>
+          <h1 className="text-rose-900 font-semibold text-[1.5em] tb:text-[2.5em] lg:text-[2.2em] my-10 xg:text-[2.7em]">Dessets</h1>
+          <section className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  md:gap-6 xl:gap-7'>
              {
         cartData.map((item) => (
           <MenuCard CardData={item} Add={Add} Remove={Remove} ButtonActive={ButtonActive}  />
@@ -59,7 +59,7 @@ const CartProductsLayout = () => {
       }
           </section>
           </main>
-          <div>
+          <div className='my-5 xl:my-0'>
             <OrderCart orderData={filteringOrder} handleRemove={handleRemove} />
           </div>
          </div>

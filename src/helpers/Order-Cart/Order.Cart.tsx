@@ -19,7 +19,7 @@ const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
      const pass = orderData.filter(item => item.isActive === true)
  
   return (
-    <div className=' w-[330px] md:w-[350px] xl:w-[400px] p-3 lg:p-7  bg-white rounded-[7px] m-4'>
+    <div className=' w-[330px] md:w-[350px] xl:w-[400px] xg:w-[370px] p-3 lg:p-7  bg-white rounded-[7px] m-4 '>
         <h3 className='font-black text-bt-Orange-0 text-[1.3em] pl-2 my-4'>Your Cart ({numOfCartItems}) </h3>
         {
           numOfCartItems <= 0 ?

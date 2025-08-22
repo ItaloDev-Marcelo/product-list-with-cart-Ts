@@ -4,6 +4,7 @@
 body {
     font-family: "Red Hat Text", sans-serif;
     background: #fcf9f7;
+    overflow-x: hidden !important;
 }
 
 @theme {
@@ -20,3 +21,6 @@ body {
     --color-rose-900: #260f08;
 }
 
+.items-none {
+    align-items: normal !important;
+}

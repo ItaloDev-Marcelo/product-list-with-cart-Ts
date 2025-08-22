@@ -2,7 +2,7 @@ import MenuCard from './components/Menu.Card'
 import Data from './Data/Data'
 import {useState} from 'react'
 import type { CountData } from './interfaces/Data.Interface'
-import OrderCart from './helpers/Order-Cart/Order-Cart'
+import OrderCart from './helpers/Order-Cart/Order.Cart'
 
 function App() {
   const [cartData, setCartData] = useState<CountData[]>(Data)
