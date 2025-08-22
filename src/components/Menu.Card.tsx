@@ -1,11 +1,6 @@
-import type { CountData } from "../interfaces/Data.Interface"
 import MenuButton from './Menu.Button'
 import  ButtonControls from './Button.Controls'
-
-
- interface CardFormate {CardData:CountData, Add: (name: string) => void,Remove: (name:string) => void,
-   ButtonActive:(name: string) => void}
-
+import type { CardFormate } from '../interfaces/MenuCard';
 
 const MenuCard = ({CardData, Add, Remove, ButtonActive}:CardFormate) => {
   const {image, name, category, price, count, isActive} = CardData;

@@ -1,11 +1,10 @@
-import cake from '../../assets/images/illustration-empty-cart.svg'
-import type { CountData } from '../../interfaces/Data.Interface'
+
+import  CenterImage  from  '../../components/ImageCenter'
 import CardOrderItem from '../../components/Cart.OrderItem'
- import Carbon from '../../assets/images/icon-carbon-neutral.svg'
-interface OrderFormate {orderData:CountData[], handleRemove: (name:string) => void}
+import type { OrderFormate } from '../../interfaces/OrderCart'
 
 const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
-
+    const {empathyCart, carbonNeutral} = CenterImage
     const numOfCartItems = orderData.filter(item => item.isActive === true).
     map((item) => item.count)
     .reduce((acc, num) => acc + num,0)
@@ -25,7 +24,7 @@ const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
           numOfCartItems <= 0 ?
          ( <div className='flex flex-col justify-center items-center my-3'>
             <figure>
-                <img src={cake} alt='empathy-cart icon' />
+                <img src={empathyCart} alt='empathy-cart icon' />
             </figure>
             <p className='text-rose-400'>Your added items will appear here</p>
           </div> )
@@ -43,7 +42,7 @@ const OrderCart = ({orderData, handleRemove}:OrderFormate) => {
             </div>
          
             <div className='bg-rose-100 rounded-[12px] flex flex-row justify-center items-center h-[60x] p-2'>
-              <img src={Carbon} alt='' className='mr-2'/>
+              <img src={carbonNeutral} alt='' className='mr-2'/>
               <p>This is a <span  className='font-medium text-rose-900'>carbon-neutral</span> </p>
              </div>
   

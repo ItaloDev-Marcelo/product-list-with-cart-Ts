@@ -1,15 +1,9 @@
-
-import Close from '../assets/images/icon-remove-item.svg'
-import type { CountData } from '../interfaces/Data.Interface';
-
-interface OrderFormate {
-    CartData: CountData;
-    handleRemove: (name: string) => void
-}
+import CenterImage from './ImageCenter'
+import type { OrderFormate } from '../interfaces/OrderItems'
 
 const CartOrderItem = ({CartData, handleRemove}:OrderFormate) => {
 
-
+  const {remove} = CenterImage 
   const total = CartData.price * CartData.count
 
   return (
@@ -23,7 +17,7 @@ const CartOrderItem = ({CartData, handleRemove}:OrderFormate) => {
         </div>
         <button className='border-1  cursor-pointer border-rose-400 rounded-[50%] p-1 mt-1'
          onClick={() => handleRemove(CartData.name)}>
-            <img src={Close} alt=''/>
+            <img src={remove} alt=''/>
         </button>
     </div>
     <hr className='px-2 border  border-gray-300' />
